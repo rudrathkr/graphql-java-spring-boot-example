@@ -41,6 +41,102 @@ mutation {
   }
 }
 ```
+Use these for queries:
+```
+1. Open browser type http://localhost:8080/graphiql 
+
+In query send  
+
+{ 
+
+  findAllBooks { 
+
+    id 
+
+    isbn 
+
+    title 
+
+    pageCount 
+
+    author { 
+
+      firstName 
+
+      lastName 
+
+    } 
+
+  } 
+
+} 
+
+ 
+
+3. Add new Author 
+
+mutation{ 
+
+  newAuthor(firstName: "mike",lastName: "herd"){ 
+
+    id 
+
+    firstName 
+
+    lastName 
+
+     
+
+  } 
+
+} 
+
+Display all authors 
+
+{ 
+
+  findAllAuthors{ 
+
+    id 
+
+    firstName 
+
+    lastName 
+
+  } 
+
+} 
+
+Countallauthors 
+
+{ 
+
+  countAuthors 
+
+} 
+
+6. Add new book  
+
+mutation{ 
+
+  newBook(title:"Macbeth",isbn:"879700AB",pageCount: 1000,author:1){ 
+
+    id 
+
+    title 
+
+    isbn 
+
+  } 
+
+} 
+
+
+```
+
+
+
+
 
 # Extras
 

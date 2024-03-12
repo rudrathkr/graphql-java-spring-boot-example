@@ -147,6 +147,65 @@ This build demos some UIs hosted at [graphql-java-kickstart](https://github.com/
     * [Altair](http://localhost:8080/altair)
     * [Playground](http://localhost:8080/playground)  
     * [Voyager](http://localhost:8080/voyager)
+# Test Subscription using the following steps outlined
+```
+Listen to an event  -1 
+
+----------------------------------- 
+
+1. Open the Explorer - https://hasura.io/learn/graphql 
+
+subscription { 
+
+  online_users { 
+
+    id 
+
+    last_seen 
+
+    user { 
+
+      name 
+
+    } 
+
+  } 
+
+} 
+Run it
+ 
+
+2. Fire the event from another NEW browser –2 
+
+ Open the Explorer - https://hasura.io/learn/graphql 
+
+mutation updateLastSeen($now:timestamptz!){ 
+
+  update_users(where:{},_set:{last_seen:$now}){ 
+
+    affected_rows 
+
+  } 
+
+   
+
+} 
+
+Query variables 
+
+{ 
+
+  "now":"2024-03-08T16:37:34.051Z" 
+
+} 
+
+ 
+
+Do a console and get the time (new Date()).toISOString() ......get this value and change in the now variable and run this
+
+3. Immediately go to first step browser and you should see the online user updated. (Time is key here so better be fast as the notification will vanish in 5-6 seconds)
+
+```
 
 # License
 MIT

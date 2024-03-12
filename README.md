@@ -91,7 +91,7 @@ mutation{
 
 } 
 
-Display all authors 
+4. Display all authors 
 
 { 
 
@@ -107,7 +107,7 @@ Display all authors
 
 } 
 
-Countallauthors 
+5. Countallauthors 
 
 { 
 

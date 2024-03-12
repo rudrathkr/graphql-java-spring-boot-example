@@ -1,3 +1,94 @@
+# General Stuff for GraphQL
+```
+GraphQL common tools:​
+
+Playground​
+
+Postman​
+
+GraphQL Explorer​
+​=============================================
+Query (a read-only fetch) - Get​
+
+Mutation (a write followed by fetch) - New, Update, Delete​
+
+Subscription (a long‐lived request that fetches data in response to source events.)​
+
+Error Handling​
+
+```
+
+# Testing and Automation Strategies and Best Practices
+```
+        Know the Type of API to test – Rest, Soap, GraphQL​
+        
+        Read and understand the documentation​
+        
+            Rest – Swagger (Rest API)​
+            
+            GraphQL – Libraries in node as npm – graphql docs, spectaql(explorer endpoint)​
+        
+        Understand the schema and how they are interrelated ​
+        
+        Functional Testing - understand the types, queries, mutations, subscriptions​
+        
+        Focus should on testing schemas, query and mutation(Similar to Rest)​
+        
+            Missing  required fields.​
+            
+            Incorrect argument types.​
+            
+            Validation of schema changes​
+            
+            Violating custom validations.​
+            
+            Field-level validations.​
+            
+            Input object validations.​
+        
+        Try and explore the network tab of chrome and get the details – Headers, endpoints, type of requests​
+        
+        All of the request is a Post ​
+        
+        Convert the queries in rest assured as Json payloads before sending ​
+        
+        Performance Testing – Complex Queries , Server performance monitoring​
+        
+        All other functionality of Rest Assured/Karate Framework can be used​
+
+      Begin by tool and language identification ​
+      
+        Java  - Rest Assured, Karate, TestGraphQL​
+        
+        JS – SuperTest,Jest, Mocha​
+        
+        Ready API ​
+        
+      Error handling and resilience testing -  Query Error, Validation Error , Resolver error​
+      
+        Empty arrays.​
+        
+        Maximum/minimum values.​
+        
+        Invalid query handling.​
+        
+        Authentication failures.​
+        
+        Authorization denials.​
+        
+      Strategies around framework – Data driven, keyword driven, TestNG, Junit remains same ​
+      
+      Data and payload can be passed at run time​
+      
+      Security Testing – Authorization and Authentication​
+      
+      Performance testing – Jmeter ​
+      
+        Concurrent request handling.​
+        
+        Response time evaluation.​
+```
+
 # graphql-java-spring-boot-example
 Sample app for my tutorial [Building a GraphQL Server with Spring Boot](https://app.pluralsight.com/guides/building-a-graphql-server-with-spring-boot). 
 
